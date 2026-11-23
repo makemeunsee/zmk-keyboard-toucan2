@@ -22,7 +22,13 @@
         e_acute: e_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp E &kp SINGLE_QUOTE>;
+            bindings =
+                <&kp CAPSLOCK>,
+                <&macro_wait_time 10>,
+                <&kp E>,
+                <&macro_wait_time 10>,
+                <&kp SINGLE_QUOTE>;
+
             label = "E_ACUTE";
         };
     };
@@ -40,14 +46,14 @@
         nav {
             display-name = "NAV";
             bindings = <
-&kp ESCAPE  &trans  &trans  &e_acute  &trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &kp INS  &kp DELETE  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp RIGHT_SHIFT  &kp LEFT_GUI  &kp LEFT_CONTROL  &mo 3  &mo 1  &trans  &trans
+&kp ESCAPE  &trans  &trans  &e_acute  &trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &kp INS  &kp DELETE  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp RIGHT_SHIFT  &kp LEFT_GUI  &kp LEFT_CONTROL  &to 3  &mo 1  &trans  &trans
             >;
         };
 
         sym {
             display-name = "SYM";
             bindings = <
-&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &kp LSHFT  &trans  &trans  &trans  &kp SINGLE_QUOTE  &trans  &kp BACKSLASH  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_SHIFT  &trans  &trans  &mo 2  &mo 3  &mkp MB2  &mkp MB3
+&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &kp LSHFT  &trans  &trans  &trans  &kp SINGLE_QUOTE  &trans  &kp BACKSLASH  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_SHIFT  &trans  &trans  &mo 2  &to 3  &mkp MB2  &mkp MB3
             >;
         };
 
